@@ -27,12 +27,27 @@ call plug#begin('~/.vim/plugged')
 " Complementos populares
 Plug 'tpope/vim-sensible'  " Configuración predeterminada de Vim
 Plug 'scrooloose/nerdtree' " Explorador de archivos
-Plug 'junegunn/fzf.vim'    " Búsqueda rápida y fuzzy
+" Toggle NERDTree
+map <C-n> :NERDTreeToggle<CR>
+" Mostrar los archivos ocultos
+let NERDTreeShowHidden=1
+
+"Plug 'junegunn/fzf.vim'    " Búsqueda rápida y fuzzy - se tiene que tener
+"installado fzf 
+" Buscar archivos con fzf
+"nnoremap <C-p> :Files<CR>
+
+
+
 Plug 'preservim/nerdcommenter' " Comentarios de código fáciles
 " Complemento para autocierre de paréntesis, comillas, etc.
 Plug 'jiangmiao/auto-pairs'
+"Plug 'yazi/yazi.vim'
+"let g:yazi_auto_enable = 1
+
 
 call plug#end()
+
 "Execute this in your vim editor :PlugInstall
 
 

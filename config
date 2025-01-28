@@ -194,9 +194,9 @@ bar {
 }
 
 #screenshot with scrot
-# Captura de pantalla completa
-bindsym Print exec scrot ~/Pictures/Screenshots/screenshot_%Y-%m-%d_%H-%M-%S.png
+# Captura de pantalla completa y copia al clipboard
+bindsym Print exec scrot -e 'xclip -selection clipboard -t image/png < $f' ~/Pictures/Screenshots/screenshot_%Y-%m-%d_%H-%M-%S.png
 
-# Captura de pantalla de una selección
-bindsym Shift+Print exec scrot -s ~/Pictures/Screenshots/screenshot_%Y-%m-%d_%H-%M-%S.png
+# Captura de pantalla de una selección y copia al clipboard
+bindsym Shift+Print exec scrot -s -e 'xclip -selection clipboard -t image/png < $f' ~/Pictures/Screenshots/screenshot_%Y-%m-%d_%H-%M-%S.png
 
